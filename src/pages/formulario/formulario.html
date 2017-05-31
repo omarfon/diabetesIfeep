@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar color="ifeep">
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h3 text-center>Por Favor llena el siguiente formulario, el cual nos servirá para poder ayudarte </h3>
+  <form [formGroup]="dataInicial">
+    <ion-list>
+      <!--Aqui el input con validaciones para el nombre-->
+      <ion-item >
+        <ion-label floating>Nombres</ion-label>
+        <ion-input formControlName="nombres" type="text" placeholder="Nombres"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="dataInicial.get('nombres').errors && dataInicial.get('nombres').dirty">
+        <p color="danger" ion-text *ngIf="dataInicial.get('nombres').hasError('required')">Este campo es requerido</p>
+      </ion-item>
+      <!--fin del nombre con validaciones-->
+
+      <!--input de los apellidos con notificaciones de errores-->
+      <ion-item >
+        <ion-label floating>Apellidos</ion-label>
+        <ion-input formControlName="apellidos" type="text" placeholder="Apellidos"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="dataInicial.get('apellidos').errors && dataInicial.get('apellidos').dirty">
+        <p color="danger" ion-text *ngIf="dataInicial.get('apellidos').hasError('required')">Este campo es requerido</p>
+      </ion-item>
+      <!--fin de apellidos y sus validaciones-->
+
+      <ion-item >
+        <ion-label floating>Telefono</ion-label>
+        <ion-input formControlName="telefono" type="number" placeholder="Telefono"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label floating>DNI</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label floating>Email:</ion-label>
+        <ion-input type="email" ></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label floating>País</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label floating>Ciudad</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label floating>Distrito</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label floating>Edad</ion-label>
+        <ion-input type="age"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label floating>Sexo</ion-label>
+        <ion-input type="text"></ion-input>
+      </ion-item>
+    </ion-list>
+  </form>
+  <div text-center>
+    <button ion-button center (click)="pasaraTabs()" >Guardar datos</button>  
+  </div>
+  
+</ion-content>

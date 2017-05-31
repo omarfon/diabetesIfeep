@@ -1,0 +1,26 @@
+
+<ion-content padding class="loginBackground">
+    <div class="containerLogo" text-center>
+        <img class="logotipo" src="../../assets/img/logoIfeep.png">    
+    </div>
+    <form (ngSubmit)="iniciarSesion()" #inicioSesionForm="ngForm">
+        <ion-list>
+            <ion-item>
+                <ion-label stacked>Usuario</ion-label>
+                <ion-input type="text" name="usuario" [(ngModel)]="credenciales.usuario" required></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label stacked>Contraseña</ion-label>
+                <ion-input type="password" name="contrasena" [(ngModel)]="credenciales.contrasena" required></ion-input>
+            </ion-item>
+
+            <div padding>
+                <button ion-button block type="submit" color="ifeep" [disabled]="!inicioSesionForm.form.valid">Entrar</button>
+            </div>
+        </ion-list>
+    </form>
+    <div text-center class="containerCondiciones">
+        <button ion-button (click)="irACondiciones()"  clear>Terminos y Condiciones</button>
+    </div>
+</ion-content>

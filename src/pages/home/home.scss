@@ -1,0 +1,20 @@
+page-home {
+.loginBackground{
+    background-image: url(../../assets/img/fondoLogin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+ .containerLogo{
+    margin-top: 80px;
+    margin-bottom: 40px;
+ }
+ .item-md{
+     background-color:transparent!important;
+ }
+ .label-md{
+     color:#fff!important;
+ }
+ .containerCondiciones button{
+     color:#fff;
+ }
+}//corchete final//
