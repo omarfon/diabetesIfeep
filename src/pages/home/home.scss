@@ -1,8 +1,13 @@
 page-home {
 .loginBackground{
-    background-image: url(../../assets/img/fondoLogin.png);
+    background-image: url(../../assets/img/fondologin.png);
     background-repeat: no-repeat;
     background-size: cover;
+    //background-color: #45C3CB;
+ }
+ .logotipo{
+     width:100px;
+     height: auto;
  }
  .containerLogo{
     margin-top: 80px;

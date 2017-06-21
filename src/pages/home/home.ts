@@ -9,10 +9,10 @@ import { FormularioPage } from '../formulario/formulario';
 export class HomePage {
 credenciales = {usuario:'', contrasena:''};
   constructor(public navCtrl: NavController,
-              public alertctrl: AlertController) { }
+              public alertctrl: AlertController) {}
 
 iniciarSesion(){
-  if( this.credenciales.usuario === 'user' && this.credenciales.contrasena === '123'){
+  if(this.credenciales.usuario === 'user' && this.credenciales.contrasena === '123'){
     this.navCtrl.setRoot(FormularioPage);
   }else{
     let alert = this.alertctrl.create({

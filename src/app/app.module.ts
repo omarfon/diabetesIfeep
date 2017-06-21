@@ -13,6 +13,12 @@ import { TemasPage } from '../pages/temas/temas';
 import { PrincipalPage } from './../pages/principal/principal';
 import { ControlesPage } from './../pages/controles/controles';
 import { AlertasPage } from './../pages/alertas/alertas';
+import { DetalleClasePage }from './../pages/detalle-clase/detalle-clase';
+
+import { PeriodicosPage } from './../pages/periodicos/periodicos';
+import { EspecializadoPage } from './../pages/especializado/especializado';
+import { PesquizajePage } from './../pages/pesquizaje/pesquizaje';
+import { GlucemiaPage } from './../pages/glucemia/glucemia';
 
 
 
@@ -28,7 +34,12 @@ import { AlertasPage } from './../pages/alertas/alertas';
     TemasPage,
     PrincipalPage,
     ControlesPage,
-    AlertasPage
+    AlertasPage,
+    DetalleClasePage,
+    PeriodicosPage,
+    EspecializadoPage,
+    PesquizajePage,
+    GlucemiaPage
   ],
   imports: [
     BrowserModule,
@@ -44,7 +55,12 @@ import { AlertasPage } from './../pages/alertas/alertas';
     TemasPage,
     PrincipalPage,
     ControlesPage,
-    AlertasPage
+    AlertasPage,
+    DetalleClasePage,
+    PeriodicosPage,
+    EspecializadoPage,
+    PesquizajePage,
+    GlucemiaPage
   ],
   providers: [
     StatusBar,

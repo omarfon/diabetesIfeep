@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { DetalleClasePage } from '../detalle-clase/detalle-clase';
 
+import { CLASES } from '../../assets/json/clases';
+
+import { Lista } from '../../assets/interfaces/lista.interface';
 
 @Component({
   selector: 'page-temas',
@@ -8,9 +12,18 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class TemasPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+lista:Lista[] = [];
 
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+     this.lista = CLASES.splice(0);
+
+  }
+irADetalle(li){
+  this.navCtrl.push(DetalleClasePage,{
+    li:li,
+  });
+}
 
 
 }
